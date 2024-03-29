@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spotted Menu</title>
+    <style>
+        .console-underscore {
+            display: inline-block;
+            position: relative;
+
+        }
+        .console-underscore::after {
+            content: '_';
+            animation: blink 1s infinite;
+            color: #fff;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        #console {
+            color: #fff; /* Example color */
+
+        }
+        #redirecting {
+            display: none;
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src = "js/dayOfTheWeek.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/text.scss"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body class = "background-center">
+    <!-- <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+         Navbar content 
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+        </div>
+      </nav> -->
+    <div class="container">
+        <img src = "img/transparent-spot.png" style="width: 100%;">
+        <div class="vertical-center">
+            <div class="dayOfTheWeek" style="display: flex;width: 100%;justify-content: center;">
+                <h1 style="text-align:center;  text-transform: uppercase; margin-bottom: 20%;color: white; margin-right: 5%;">Today is:</h1>
+                <h1 id="console" style="color:#ffffff" class="console-underscore">Tuesday</h1>    
+            </div>
+            <div class="days" style="width: 100%;display: flex;flex-direction: column;flex-wrap: wrap;align-content: center;padding: 0%;">
+                <a href="wednesday.html" id = "wed" class="btn-container"><button class="btn btn-primary" type="button">Wednesday Menu</button></a>
+                <a href="sunday.html" id = "sun" class="btn-container"><button class="btn btn-primary" type="button" style="
+    height: 140px;
+">Sunday Menu</button></a>
+            </div>
+        </div>
+        <div id = "redirecting" style = "color:white; text-align: center;">Redirecting...</div>
+        <footer>
+            <div class = "content">
+                <div class="content__container">
+                    <p class="content__container__text">
+                    Created By Aaron, The
+                    </p>
+                    
+                    <ul class="content__container__list">
+                    <li class="content__container__list__item">Bartender!</li>
+                    <li class="content__container__list__item">Bouncer!</li>
+                    <li class="content__container__list__item">Barback!</li>
+                    <li class="content__container__list__item">Programmer!</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script>
+     
+  document.addEventListener('DOMContentLoaded', () => {
+    const referrer = document.referrer;
+
+    if (referrer.includes('sunday.html')) {
+      // If coming from previousPage1.html, slide in from left
+      document.body.classList.add('fade-out-from-left');
+    } else if (referrer.includes('wednesday.html')) {
+      // If coming from previousPage2.html, slide in from right
+      document.body.classList.add('fade-out-from-right');
+
+    }
+    // Add more conditions as needed for other referrers/pages
+
+
+    
+        const btnLeft = document.getElementById('wed');
+        const btnRight = document.getElementById('sun');
+        
+        btnLeft.addEventListener('click', function() {
+            applyFadeOutAnimation('left');
+        });
+
+        btnRight.addEventListener('click', function() {
+            applyFadeOutAnimation('right');
+        });
+        const target = this.getAttribute('href');
+        function applyFadeOutAnimation(direction) {
+            // Remove any existing fade-out animation classes
+            document.body.classList.remove('fade-out-to-left', 'fade-out-to-right');
+
+            if (direction === 'left') {
+            document.body.classList.add('fade-out-to-left');
+            // Set a delay equal to the animation duration before navigating
+            setTimeout(() => {
+                // Navigate to the target URL for the left button
+                window.location.href = target;
+            }, 500); // Assume animation duration is 500ms
+            } else if (direction === 'right') {
+            document.body.classList.add('fade-out-to-right');
+            setTimeout(() => {
+                // Navigate to the target URL for the right button
+                window.location.href = target;
+            }, 500); // Assume animation duration is 500ms
+            }
+        }
+        });
+    </script>
+        
+    
+      <script src="js/script.js"></script>
+</body>
+</html>
