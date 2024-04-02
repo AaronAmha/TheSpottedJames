@@ -1,0 +1,136 @@
+.fill {
+    background: rgba(255, 0, 0, 0);
+    color: rgba(0,0,0,0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+    transition: all .3s ease; 
+  }
+.btn-fill {
+    background: rgba(255, 0, 0, 0.712);
+    color: rgba(0,0,0,0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+    transition: all .3s ease;  
+}
+a {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    font-family: 'Righteous', sans-serif;
+     color: white; 
+     font-size: 1.5rem; 
+     font-weight: 500; 
+     padding: 5%;
+}
+.options {
+    max-height: 70%;
+}
+.titel{
+    font-family: 'Righteous', sans-serif; 
+    color: white; 
+    font-size: 1.5rem; 
+    font-weight: 700;
+    margin: 5% 0% 5% 0%;
+    text-transform: uppercase;
+
+}
+/* .options h5{
+    font-family: 'Righteous', sans-serif;
+    color: rgba(255,255,255,0.98);
+    
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin: 5% 0% 5% 0%;
+  } */
+  .content__container__list {
+    margin-top: 17%;
+  }
+  .cardys {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);  
+    padding: 3%;  
+    filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  .content {
+    position: fixed;
+    top: 94%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    overflow: hidden;
+    font-family: "Lato", sans-serif;
+  
+    color: #ecf0f1;
+  }
+.beers .banner-image{ 
+    background-image: none ;
+
+}
+.upslope .banner-image {
+    background-image: url(../img/upslope-citra-pale-ale-2903_0.jpg)
+}
+.juicybanger .banner-image {
+    background-image: url(../img/juicybanger.jpg)
+}
+.apricotblonde .banner-image {
+    background-image: url(../img/8f14954ebc957a41da31264251204577.png);
+    background-position-y: 17%;
+}
+.shilling .banner-image {
+    background-image: url(../img/90-Shilling-ProductCrops-e1588041326994.png);
+    background-position-y: 17%;
+}
+.voodoo-draft .banner-image {
+    background-image: url(../img/Voodoo-Ranger-IPA-Lifestyle-Image-6.jpg);
+}
+.voodoo-can .banner-image {
+    background-image: url(../img/juiceforcce.jpg);
+
+}
+.bluemoon .banner-image{
+    background-image: url(../img/blue-moon-drarft-e1651685485544.jpg)
+}
+.dale .banner-image {
+    background-image: url(../img/dale.jpg);
+}
+.fat .banner-image{
+    background-image: url(../img/fat.jpg);
+}
+.budweiser .banner-image {
+    background-image: url(../img/budw.jpg)
+}
+.millerHL .banner-image {
+    background-image: url(../img/millhl.jpg);
+    background-position-y: 38%;
+}
+.banquet .banner-image {
+    background-image: url(../img/Coors-Banquet-15PK-Logo.png);
+    background-position-y: 17%;
+}
+.pbr .banner-image {
+    background-image: url(../img/pbr.jpg);
+    background-position-y: 45%;
+}
+.beers {padding: 0% 0%;}
+
+p {
+    text-transform: none;
+}
+.ABV {
+    /* font-size: 1.0rem; */
+}
+.desc {
+    font-weight: 300;
+    font-size:x-small;
+    text-align: justify;
+    text-align-last: left;
+}

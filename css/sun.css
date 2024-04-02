@@ -1,16 +1,14 @@
 /* Apply the background image style to the body */
 body {
-    height: 100vh; /* Full height */
-    width: 100wh;
-    /* Replace 'your-image.jpg' with the path to your image */
-    /* background-image: url('../img/JGP.Williams+Construction.10-27-21.The+Spotted+James.Boulder+CO.06.png'); */
-    background-image: url('../img/JGP.Williams+Construction.10-27-21.The+Spotted+James.Boulder+CO.06.png');
-    background-size: cover; /* Cover the entire page */
-    background-position-x: 100%; /*Center the background image*/
-    background-repeat: no-repeat; /* Do not repeat the image */
-    animation: slideInRight 0.5s ease-out forwards;
-    padding: 5% 5%;
-    margin: 0; /* Remove default margin */
+   
+    max-height: 100%;
+    max-width: 100vw;
+    /* background-image: url(../img/JGP.Williams+Construction.10-27-21.The+Spotted+James.Boulder+CO.06.png); */
+    background-image: url(../img/JGP.Williams+Construction.10-27-21.The+Spotted+James.Boulder+CO.06.png);
+    background-size: cover;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 .images {
     display: flex;
@@ -30,10 +28,20 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh; /* Make sure the container takes up full viewport height */
+}
+.options {
+    flex: 1; /* This makes the section fill the available space */
+    overflow-y: auto; /* Enables vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS devices */
+}
 .content {
     position: fixed;
-    top: 90%;
+    top: 94%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 100%;
@@ -196,6 +204,174 @@ body {
     
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* body {
+  /* solid background 
+  background: rgb(0,212,255);
+  
+  /* gradient background
+  background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(11,3,45,1) 100%);    
+  
+  /* photo background 
+  background-image: url(https://images.unsplash.com/photo-1619204715997-1367fe5812f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1889&q=80);
+  background-size: cover;
+  background-position: center;  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;    
+  height: 100vh;  
+} */
+
+.cardys {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 1%;  
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.options {
+    display: flex;
+    flex-direction: column; /* Adjust this based on your layout preference */
+    max-height: 70%; /* Set the height to fill the screen */
+    justify-content: space-between; /* Distribute space evenly 
+    padding: 20px;  Adjust based on your design */
+    box-sizing: border-box; /* Include padding in the height calculation */
+    flex-grow: 1; /* Take up all available space */
+    overflow-y: auto; /* Add scroll to this container */
+}
+/* @media (min-width: 200px) and (max-width: 768px) {
+    /* .options {
+        flex-direction: column;
+        justify-content: start;
+        height: auto; /* Allow the container to grow as needed on smaller screens 
+    }
+    .options > div {
+        margin-bottom: 20px; /* Add some space between items 
+    }
+    .banner-image {
+        /* /photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80); 
+         background-position: center;
+         background-size: cover;
+         height: 100px;
+         width: 100%;
+         border-radius: 4%;
+         border: 1px solid rgba(255,255,255, 0.255)
+       } *
+} */
+.banner-image {
+ /* /photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80); */
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 4%;
+  border: 1px solid rgba(255,255,255, 0.255)
+}
+.cocktails .banner-image {
+    background-image: url(../img/cocktails.jpg)
+}
+.beers .banner-image {
+    background-image: url(../img/craft_beer_taps.png)
+}
+.spirits .banner-image {
+    background-image: url(../img/whiskey.jpg)
+}
+.na .banner-image {
+    background-image: url(../img/berry-smash-720x720-primary-fcb963f369a8430993d873f8e35f9708.jpg)
+}
+.beerrs .banner-image{
+    background-image: url(../img/craft_beer_taps.png)
+}
+.cocktails { padding: 5% 0%;}
+.beers {padding: 5% 0%;}
+.spirits{padding: 5% 0%;}
+.na {padding: 5% 0%;}
+h5{
+  font-family: 'Righteous', sans-serif;
+  color: rgba(255,255,255,0.98);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+/* .options {
+    flex-grow: 1; /* Take up all available space 
+    overflow-y: auto; /* Add scroll to this container 
+} */
+p {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 150%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.button-wrapper{
+  margin-top: 1%;
+}
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  cursor: pointer;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+.outline {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all .3s ease;
+  
+}
+
+.outline:hover{
+  transform: scale(1.125);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  transition: all .3s ease;  
+}
+
+.fill {
+  background: rgba(255, 0, 0, 0.9);
+  color: rgba(0,0,0,0.95);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all .3s ease; 
+}
+
+.fill:hover{
+  transform: scale(1.125);  
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+  transition: all .3s ease;    
+}
 /* Global page animation styles */
 
 /* Global page animation styles */
@@ -630,3 +806,5 @@ body {
 @media (max-width: 1399.98px) { 
 
  }
+
+ 
