@@ -4,6 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Spotted Menu</title>
+    <!-- <style>
+  .button-wrapper {
+    margin-top: 1%;
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.5s ease; /* Smooth transition for height change */
+}
+
+.btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.btn + .btn {
+    margin-top: 10px; /* Add margin to separate buttons */
+}
+
+.outline {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.fill {
+    background: rgba(255, 0, 0, 0.9);
+    color: rgba(0, 0, 0, 0.95);
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.125);
+}
+
+/* Adjust button styles on hover */
+.fill:hover {
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+    background-color: rgba(200, 0, 0, 0.9); /* Change background color on hover */
+}
+
+/* Adjust outline button styles on hover */
+.outline:hover {
+    border-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.3); /* Change background color on hover */
+}
+        
+    </style> -->
     <style>
         .console-underscore {
             display: inline-block;
@@ -30,7 +82,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src = "js/dayOfTheWeek.js"></script>
-    <link rel="stylesheet" href="css/sun.css">
+    <link rel="stylesheet" href="../css/sun.css">
+    <link rel="stylesheet" href="../css/beers.css">
     <!-- <link rel="stylesheet" href="css/text.scss"> -->
     <link href="https://fonts.cdnfonts.com/css/casino" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -52,77 +105,321 @@
     <div class="container-fluid">
         <header>
             <div class="images">
-                <a href="index.html" style="width: 25%;">
-                    <img src="img/back.png" style="width: 100%;float:left; margin-left: 5%;"> 
+                <a href="#" id = "backButton" style="width: 25%;">
+                    <img src="../img/back.png" style="width: 100%;float:left; margin-left: 5%;"> 
                 </a>
-                <a href="sunday.html" style="width: 75%;">
-                    <img src="img/Spotted2.png" style="width: 100%; padding: 10%;"> 
+                <a href="../index.html" style="width: 75%;">
+                    <img src="../img/Spotted2.png" style="width: 100%; padding: 10%;"> 
                 </a>
             </div>
         </header>
         <div class = "options">
-            <div class = "cocktails">
-                <div class="cardys">
+            <div class = "beerpage">
+                     <div class = "beers">
+                <div class="cardys" style="background-color: rgba(17,25,40,0.75);
+                ">
                     <div class="wrapper">
-                    <div class="banner-image"></div>
-                    <h5>Cocktails</h5>
-                    <p>Whether it may be our Classics, Signatures, or Seasonals</p>
+                    <!-- <div class="banner-image"></div> -->
+                    <h5 style="font-family: 'Righteous', sans-serif; color: white; font-size: 2.3rem; font-weight: 400; ">COCKTAILS</h5>
+                    <p style = "text-transform: uppercase;">Choose From Our Selection of Cocktail Options Including Classic, Highball, Tropical, and Modern Cocktail Options:</p>
                     </div>
-                    <div class="button-wrapper"> 
-                    <!-- <button class="btn outline">DETAILS</button> -->
-                    <button class="btn fill">MORE</button>
+                    <!-- <div class="button-wrapper"> 
+                    <<button class="btn outline">DETAILS</button> 
+                    <button class="btn fill"></button> -->
+                </div>
+            </div>
+            </div>
+            <div class = "jumpy">
+                <div class = "beers">
+                    <div class="cardys" style="background-color: rgba(17,25,40,0.45);  ">
+                        <div class="wrapper">
+                        <button style = "background-color: transparent; padding: 0; margin: 0;">
+                            <a href = #classic>
+                                CLASSIC COCKTAILS
+                            </a>   
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "beers">
+                    <div class="cardys" style="background-color: rgba(17,25,40,0.45);  ">
+                        <div class="wrapper">
+                        <button style = "background-color: transparent; padding: 0; margin: 0;">
+                            <a href = #highball>
+                                HIGHBALL COCKTAILS
+                            </a>   
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "beers">
+                    <div class="cardys" style="background-color: rgba(17,25,40,0.45); ">
+                        <div class="wrapper">
+                        <button style = "background-color: transparent; padding: 0; margin: 0;">
+                            <a href = #tropical>
+                                TROPICAL COCKTAILS
+                            </a>   
+                        </button>
+                        </div> 
+                    </div>
+                </div>
+                <div class = "beers">
+                    <div class="cardys" style="background-color: rgba(17,25,40,0.45); ">
+                        <div class="wrapper">
+                        <button style = "background-color: transparent; padding: 0; margin: 0;">
+                            <a href = #modern>
+                                MODERN COCKTAILS
+                            </a>   
+                        </button>
+                        </div> 
                     </div>
                 </div>
             </div>
 
-            <div class = "beers">
-                    <div class="cardys">
-                    <div class="wrapper">
-                        <div class="banner-image"></div>
-                        <h5>Beers</h5>
-                        <p>Choose From Either Our Draft or Canned Beer Options</p>
+            <div id = "classic" style = "margin-top: 50%;">
+                <div class = "beers">
+                    <div class="cardys" style="background-color: rgba(17,25,40,0.75); margin-bottom: 5%;">
+                        <div class="wrapper">
+                        <h5 style="font-family: 'Righteous', sans-serif; color: white; font-size: 2rem; font-weight: 500; margin: 5% 0% 5% 0%;">CLASSIC COCKTAILS:</h5>
+                        </div> 
                     </div>
-                    <div class="button-wrapper"> 
-                        <!-- <button class="btn outline">DETAILS</button> -->
+                    <div class = "martini">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titels">MARTINI</h5>
+                            <p class = "ABVs">Classic Martini With Either Gin or Vodka, Mixed With Dry Vermouth & Olive Juice</p>
+                            <p class = "opts">Gin: Hendricks ($10) | Tanqueray ($10)</p>
+                            <p class = "opts">Vodka: Titos ($10)| Ketel One ($12)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "marg">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titels">PREMIUM MARGARITA </h5>
+                            <p class = "ABVs">Higher Quality Spirit Options Aimed To Provide Superior Taste and Premium Experience</p>
+                            <p class = "sprt">Tequilas:</p>
+                            <p class = "opts"> Espolon ($9) | Don Julio ($10) | Milagro ($10) | | Casamigos Blanco ($14) | </p>
+                            <p class = "opts"> | Casamigos Reposado($16) |</p>
+                            <p class = "sprt">Top-Shelf Tequilas:</p>
+                            <p class = "opts">Clase De Azul ($30) | Don Julio 1942($30)</p>
+                            <p class = "sprt">Liqeur:</p>
+                            <p class = "opts">Cointreau ($2) | Grand Marnier ($3)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "oldfsn">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titels">HIGH WEST OLD FASHIONED - $8</h5>
+                            <p class = "note"> An Exquisite Pre-Made Old Fashioned Crafted By & Courtesy of High West.</p>
+                            <p class = "note"> In Consideration of a Shortage of Sugar and Cherries, We Are Pleased to Offer an Exceptional Solution in the Form of High West's Expertly Crafted Pre-Made Old Fashioned. However, Should Our Esteemed Guests Prefer the Traditional Variant, Sans Sugar and Cherries, We Are More Than Happy to Accommodate by Preparing a Classic Old Fashioned Upon Request."</p>
+                            <p class = "sprtr"><a href = "../alcohol-htmls/spirits.html#bourbons">Bourbons:</a></p>
+                            <p class = "sprtr"><a href = "../alcohol-htmls/spirits.html#ryes">Ryes:</a></p>
+                            <p class = "sprtr"><a href = "../alcohol-htmls/spirits.html#whiskeys">Whiskeys:</a></p>
+                            <p class = "opts">Click Any Of The Options Above To View Our List Of Spirits!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div id = "highball" style = "margin-top: 50%;">
+                <div class = "beers">
+                    <div class="cardys" style="background-color: rgba(17,25,40,0.75); margin-bottom: 5%;">
+                        <div class="wrapper">
+                        <!-- <div class="banner-image"></div> -->
+                        <h5 style="font-family: 'Righteous', sans-serif; color: white; font-size: 2.3rem; font-weight: 500; margin: 5% 0% 5% 0%;">IPA - INDIAN PALE ALE'S</h5>
+                        <!-- <p>Choose From Either Our Draft or Canned Beer Options</p>
+                        </div>
+                        <div class="button-wrapper"> 
+                        <button class="btn outline">DETAILS</button> -
                         <button class="btn fill">MORE</button>
+                        </div> -->
+                        </div>
+                    </div>  
+                    <div class = "juicybanger">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">STATION 26 JUICY BANGER</h5>
+                            <p class = "ABV">DRAFT - IPA | ABV: 7.4%</p>
+                            <p class = "desc">Based in Denver, Colorado, Station 26's Juicy Banger IPA is a Sensational IPA, Especially Within This Bar's Community! Station 26 Was Able To Succesfully Combine A Plethora Of Flavor Profiles Including Juicy (no-brainer), Tropical, Fruity, Vibrant, Hoppy, etc. This IPA Primarily Brings Out Flavors of Citrus, Mango, and Other Fruits To Create An Overall Refreshing and Aromatic Experience. This Beer Has Been Known To Appeal To Those Who Appreciate Bitterness and Lush Flavors.</p>
+                            </div>
+                            <!-- <div class="button-wrapper"> 
+                            <button class="btn outline">DETAILS</button> 
+                            <button class="btn fill">MORE</button>
+                            </div> -->
+                        </div>
                     </div>
-                </div>
+                    <div class = "voodoo-draft">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">VOODOO RANGER IPA</h5>
+                            <p class = "ABV">DRAFT - IPA | ABV: 7%</p>
+                            <p class = "desc">Although Highly Recognized, Voodoo Ranger IPA is Based Out Of Fort Collins, Colorado, Thanks To New Belgium Brewery! This Craft Beer Is Renowned For Its Bold, Hop-Foward Profile Combined With A Solid Malt Backbone, Creating A Well-Balanced and Highly Drinkable IPA! It Primarily Showcases The Aromatic Qualities of Hops By Highlighting Citrus & Troplical Fruits Such As Grapefruits, Mangoes, and Pineapples. This IPA Is Further Appreciated For Its Ability To Deliver A Robust Hop Character Without Overwhelming The Palate, Overall.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "voodoo-can">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">VOODOO RANGER JUICE FORCE IPA</h5>
+                            <p class = "ABV">CANNED - IPA | ABV: 9.5%</p>
+                            <p class = "desc">Although Highly Recognized, Voodoo Ranger IPA is Based Out Of Fort Collins, Colorado, Thanks To New Belgium Brewery! This Craft IPA Is Renowned As A Hazy and Juicy IPA For Its Bold, Fruit-Forward Hop Character and Evidently Higher ABV Content! It Is Described To Have More Of An Explosive Aroma of Tropical Fruit Flavors Such As Mango, Pineapple, and Citrus. It Is Accredited To Have A Fine Balance Of Hoppy, Nectar-Like Quality With A Bitterness Aspect Which Creates A Complex Yet Harmonious Taste Experience! Designed For Those Who Appreciate Hops But Desire A Sweet, Aromatic Punch, Similar To A Tropical Fruit Smoothie</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
-            <div class = "spirits">
-                <div class="cardys">
-                    <div class="wrapper">
-                    <div class="banner-image"></div>
-                    <h5>Spirits</h5>
-                    <p>Lorem ipsum dolor sit amet, <br/>
-                        consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="button-wrapper"> 
-                    <!-- <button class="btn outline">DETAILS</button> -->
-                    <button class="btn fill">MORE</button>
-                    </div>
-                </div>
-            </div>
-            <div class = "na">
-                <div class="cardys">
-                    <div class="wrapper">
-                        <div class="banner-image"> </div>
-                        <h5> NA: Non-Alcoholic Options</h5>
-                        <p>Lorem ipsum dolor sit amet, <br/>
-                            consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="button-wrapper"> 
-                        <!-- <button class="btn outline">DETAILS</button> -->
+            <div id = "tropical" style = "margin-top: 50%;">
+                <div class = "beers">
+                    <div class="cardys" style="background-color: rgba(17,25,40,0.75); margin-bottom: 2%;">
+                        <div class="wrapper">
+                        <!-- <div class="banner-image"></div> -->
+                        <h5 style="font-family: 'Righteous', sans-serif; color: white; font-size: 2.3rem; font-weight: 500; margin: 5% 0% 5% 0%;">SELTZERS</h5>
+                        <p style = "text-transform: uppercase; font-size: 0.75rem;">Choose From Our Four Delicious High Noon Flavors:</p>
+                        <!-- <p>Choose From Either Our Draft or Canned Beer Options</p>
+                        </div>
+                        <div class="button-wrapper"> 
+                        <button class="btn outline">DETAILS</button> -
                         <button class="btn fill">MORE</button>
+                        </div> -->
+                        </div>
+                    </div>  
+                    <div class = "pine">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">PINEAPPLE HIGH NOON</h5>
+                            <p class = "ABV">CANNED - SELTZER | ABV: 4.5%</p>
+                            <p class="desc">The Pineapple Flavored High Noon Offers A Tropical Taste With A Sweet And Tangy Pineapple Punch. It's Like A Sip Of Summer, Evoking Beachside Vacations And Sunny Days.</p>
+                        </div>
+                        </div>
                     </div>
-                </div>
+                    <div class = "peach">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">PEACH HIGH NOON</h5>
+                            <p class = "ABV">CANNED - SELTZER | ABV: 4.5%</p>
+                            <p class="desc">The Peach Flavored High Noon Provides A Soft, Juicy Flavor That's Both Sweet And Slightly Tart, Reminiscent Of Biting Into A Ripe Peach On A Warm Afternoon. It's Smooth With A Hint Of Natural Sweetness.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class = "bc">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">BLACK CHERRY HIGH NOON</h5>
+                            <p class = "ABV">CANNED - SELTZER | ABV: 4.5%</p>
+                            <p class="desc">The Black Cherry Flavored High Noon Delivers A Deep, Rich Taste Of Black Cherries With A Perfect Balance Of Sweet And Tart. It's Bold And Robust, Capturing The Essence Of Freshly Picked Cherries.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class = "water">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">WATERMELON HIGH NOON</h5>
+                            <p class = "ABV">CANNED - SELTZER | ABV: 4.5%</p>
+                            <p class="desc">The Watermelon Flavored High Noon Brings A Light And Refreshing Watermelon Flavor That's Sweet With A Subtle Hint Of Tartness. It Captures The Quintessential Taste Of Summer, Offering A Crisp And Hydrating Sip That's Perfect For Hot Days.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
-        </div>
+            <div id = "modern" style = "margin-top: 50%;">
+                <div class = "beers">
+                    <div class="cardys" style="background-color: rgba(17,25,40,0.75); margin-bottom: 5%;">
+                        <div class="wrapper">
+                        <!-- <div class="banner-image"></div> -->
+                        <h5 style="font-family: 'Righteous', sans-serif; color: white; font-size: 2.3rem; font-weight: 500; margin: 5% 0% 5% 0%;">SPECIALTY BEERS</h5>
+                        <!-- <p>Choose From Either Our Draft or Canned Beer Options</p>
+                        </div>
+                        <div class="button-wrapper"> 
+                        <button class="btn outline">DETAILS</button> -
+                        <button class="btn fill">MORE</button>
+                        </div> -->
+                        </div>
+                    </div>  
+                    <div class = "samadams">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">SAMUEL ADAMS: WINTER LAGER EDITION</h5>
+                            <p class = "ABV">DRAFT - CRAFT LAGER | ABV: 5.6%</p>
+                            <p class = "desc">Based Out Of Boston, Massachusetts, This Seasonal Brew Is A Warm And Festive Lager That Combines The Richness Of Malted Barley With The Subtle Spiciness Of Cinnamon, Ginger, And Orange Peel. It Offers A Balanced Flavor With A Smooth Finish, Making It A Perfect Choice For Chilly Winter Evenings​</p>
+                            </div>
+                            <!-- <div class="button-wrapper"> 
+                            <button class="btn outline">DETAILS</button> 
+                            <button class="btn fill">MORE</button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class = "apricotblonde">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">DRY DOCK'S APRICOT BLONDE</h5>
+                            <p class = "ABV">CANNED | ABV: 5.1%</p>
+                            <p class = "desc">Based in Aurora, Colorado, Apricot Blonde is Dry Dock Brewery's Signature Beers. A Combination Of Fruity Apricot Flavors Combined With The Light & Crisp Taste That Comes With A Blonde Ale Gives This Beer It's Unique Flavor Profile!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
 
-          
+            <div id = "ciders" style = "margin-top: 50%;">
+                <div class = "beers">
+                    <div class="cardys" style="background-color: rgba(17,25,40,0.75); margin-bottom: 2%;">
+                        <div class="wrapper">
+                        <!-- <div class="banner-image"></div> -->
+                        <h5 style="font-family: 'Righteous', sans-serif; color: white; font-size: 2.3rem; font-weight: 500; margin: 5% 0% 5% 0%;">CIDERS</h5>
+                        <!-- <p>Choose From Either Our Draft or Canned Beer Options</p>
+                        </div>
+                        <div class="button-wrapper"> 
+                        <button class="btn outline">DETAILS</button> -
+                        <button class="btn fill">MORE</button>
+                        </div> -->
+                        </div>
+                    </div>  
+                    <div class = "stem">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">STEM CIDER</h5>
+                            <p class = "ABV">CANNED - OFF DRY CIDER | ABV: 5.8%</p>
+                            <p class = "desc">Stem Off-Dry Cider Is Characterized By Its Tart, Clean, And Slightly Sweet Profile, Allowing The Natural Flavors Of The Apples To Shine Through. It Balances Dryness With A Hint Of Sweetness, Offering A Refreshing And Authentic Apple Taste</p>
+                            </div>
+                            <!-- <div class="button-wrapper"> 
+                            <button class="btn outline">DETAILS</button> 
+                            <button class="btn fill">MORE</button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class = "angry">
+                        <div class="cardys">
+                            <div class="wrapper">
+                            <div class="banner-image"></div>
+                            <h5 class = "titel">ANGRY ORCHARD CIDER</h5>
+                            <p class = "ABV">CANNED - CIDER | ABV: 8.0%</p>
+                            <p class = "desc">Angry Orchard's Crisp Imperial Offers The Same Bold Crisp Apple Flavor Fans Adore, Enhanced With A Punch Of 8% ABV For A Perfectly Sweet Yet Easy Drinking Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>  
+                
             
         <div class = "content">
             <div class="content__container">
-                <h6 class="content__container__text">
+                <h6 class="content__container__text"  style="font-weight: bolder;">
                 Created By Aaron, The
                 </h6>
                 
@@ -159,5 +456,45 @@
         </script>
       <script src="js/sun.js"></script>
       <script src="js/script.js"></script> -->
+      
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-cbI6qLd1bFwQv5/5HRetW2bHsMc94RyGHRbRv5Ib8zB2Wk8OIY9KV7F+qd7NO5JF" crossorigin="anonymous"></script> -->
+      <!-- <script>
+      $(document).ready(function(){
+        $('.card').click(function(){
+                    $(this).find('.details-1, .details-2').toggleClass('unfold').parents('.card').siblings().children('.details-1, .details-2').removeClass('unfold');
+                    $(this).toggleClass('span').siblings('.card').removeClass('span');
+        });
+    });
+   </script> -->
+   <!-- <script>
+    function toggleButton(button) {
+        // Toggle the max-height value between 0 and its scroll height
+        if (button.nextElementSibling.style.maxHeight) {
+            button.nextElementSibling.style.maxHeight = null;
+        } else {
+            button.nextElementSibling.style.maxHeight = button.nextElementSibling.scrollHeight + "px";
+        }
+    }
+</script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+<script>
+window.addEventListener('load', (event) => {
+    const backButton = document.getElementById('backButton');
+    // Assuming 'beers.html' is in the current path, we'll check for a hash
+    if (window.location.href.includes('#')) {
+        // Directly modifying window.location to ensure we stay on the same page minus the hash
+        backButton.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent the default anchor action
+            window.history.pushState("", document.title, window.location.pathname); // Remove hash
+            window.location.reload(); // Reload the page without the hash
+        });
+    } else {
+        // If there's no hash, just change the button's link to 'sunday.html'
+        backButton.href = "../sunday.html";
+    }
+});
+</script>
+    
 </body>
 </html>
+  

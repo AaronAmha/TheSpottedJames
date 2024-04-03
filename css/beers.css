@@ -120,17 +120,116 @@ a {
     background-image: url(../img/pbr.jpg);
     background-position-y: 45%;
 }
+.corona .banner-image {
+    background-image: url(../img/corona.jpg);    
+}
+.modelo .banner-image{
+    background-image: url(../img/modelo.jpg);
+}
+.michelob .banner-image{
+    background-image: url(../img/michelob.jpg);
+    background-position-y: 45%;
+}
+.millerlt .banner-image{
+    background-image: url(../img/MILLERLT.JPG);
+    background-position-y: 75%;
+}
+.stella .banner-image{
+    background-image: url(../img/STELLA.JPG);
+    background-position-y: 45%;
+}
+.pine .banner-image{
+    background-image: url(../img/PINE.JPG);
+    background-position-y: 58%;
+}
+.peach .banner-image{
+    background-image: url(../img/PEACH.jpg);
+    background-position-y: 60%;
+}
+.bc .banner-image{
+    background-image: url(../img/BC.jpg);
+    background-position-y: 86%;
+}
+.water .banner-image{
+    background-image: url(../img/WATER.jpg);
+    background-position-y: 55%;
+}
+.samadams .banner-image{
+    background-image: url(../img/sam-adams-winter-lager.png)
+}
+.guiness .banner-image{
+    background-image: url(../img/916jx-WscIL.jpg);
+    background-position-y: 25%;
+}
+.stem .banner-image {
+    background-image: url(../img/ci-stem-cider-off-dry-4d08d7deec433b92.jpg);
+
+}
+.angry .banner-image{
+    background-image: url(../img/angry-orchard-imperial-cider.png);
+
+}
+.martini .banner-image{
+    background-image: url(../img/martini.jpg);
+    background-position-y: 25%;
+}
+.marg .banner-image{
+    background-image: url(../img/marg.jpg);
+    background-position-y: 35%;
+}
+.oldfsn .banner-image{
+    background-image: url(../img/HW-Summer-2020-22.jpg);
+    background-position-y: 52%;
+}
 .beers {padding: 0% 0%;}
 
 p {
     text-transform: none;
 }
-.ABV {
-    /* font-size: 1.0rem; */
-}
+
 .desc {
     font-weight: 300;
     font-size:x-small;
     text-align: justify;
     text-align-last: left;
+}
+.opts {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;  
+    margin-bottom: 1%;
+}
+.sprt { 
+    margin-bottom: 0;
+    margin-top: 4%;
+}
+.sprtr a { 
+    margin-bottom: 0;
+    margin-top: 4%;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    background: rgb(77, 77, 77);
+    border-radius: 5%;
+    padding: 2%;
+}
+.sprtr {
+    margin: 10% 0% 10% 0%;
+}
+.titels {
+    font-weight: 500;
+    font-family: 'Righteous', sans-serif; 
+    color: white; 
+    font-size: 1.5rem; 
+    margin: 5% 0% 5% 0%;
+    text-transform: uppercase;
+
+}
+.abv {
+    font-weight:bold;
+}
+.note {
+    text-align: left;
+    margin-bottom: 4%;
+    /* font-weight: 600; */
 }
